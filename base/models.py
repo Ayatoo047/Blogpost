@@ -10,7 +10,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=50)
     snippet = models.CharField(max_length=50)
     body = models.TextField()
-    created = models.DateField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['-created']
@@ -27,7 +27,7 @@ class Message(models.Model):
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     blogs = models.ForeignKey(Blog, on_delete=models.CASCADE)
     body = models.TextField(null=False)
-    created = models.DateField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.body[0:50]
