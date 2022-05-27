@@ -23,3 +23,11 @@ class Blog(models.Model):
 #     room = models.ForeignKey(Blog, on_delete=models.CASCADE)
 #     created = models.DateField(auto_now=True)
 
+class Message(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    blogs = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    body = models.TextField(null=False)
+    created = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.body[0:50]
