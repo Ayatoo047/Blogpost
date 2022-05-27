@@ -1,0 +1,19 @@
+{% extends "head.html" %}
+
+{% block content %}
+
+<div class="home content">
+
+
+      <h1>All Blogs</h1>
+      {% for blog in blogs %}
+      <a class="single" href="{% url 'blogpost' blog.id %}"
+        <small>{{blog.owner}}</small>
+        <h3>{{blog.title}}</h3><br>
+        <span>{{blog.snippet}}</span>
+        <h6>{{blog.created|timesince}}</h6>
+      {% endfor %}
+      </a>
+</div>
+
+{%  endblock %}

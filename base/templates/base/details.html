@@ -1,0 +1,40 @@
+{% extends "head.html" %}
+
+{% block content %}
+
+    <div class="detail content" >
+        <span>
+            <h2>
+                {{blogs.title}}
+            </h2>
+            <span >
+               {{blogs.body}}
+            </span>
+        </span>
+        <!-- <button class="delete" data-doc="<%= blogs._id%>">delete</button> -->
+
+        <!-- <button value="0" method="POST" name="like"> like</button> -->  
+    </div>
+
+
+    <div class="class-container">
+        {% for message in messages %}
+        <div>
+            <small>{{message.owner}}</small>
+            <hr>
+            <p>{{message.body}}</p>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+
+    {% if request.user.is_authenticated %}
+    <div>
+        <form action="" required method="POST">
+            {% csrf_token %}
+            <input type="text" name="body">
+            <input type="submit" name="Send">
+        </form>
+    </div>
+    {% endif %}
+{% endblock %}

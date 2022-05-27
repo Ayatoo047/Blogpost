@@ -1,0 +1,113 @@
+:root{
+    --textColor:crimson;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#logo > a,
+li a{
+    color: white; 
+}
+li a:hover{
+    color: var(--textColor);
+}
+.navBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    justify-content: space-between;
+    height: 50px;
+    padding: 2%;
+}
+.lists{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+.list-items{
+    list-style-type: none;
+    font-size: 20px;
+    margin-right: 2%;
+    text-transform: uppercase;
+}
+.content{
+    padding-left: 5%;
+    margin: 5% auto;
+}
+.create, .footer{
+    padding-left: 45%;
+
+}
+.content h3{
+    /* background-color: rgb(206, 206, 206); */
+    /* padding: 0% 0 0 2%; */
+    height: 40px;
+    line-height: 40px;
+    width: 40%;
+}
+.content p{
+    width: 60%;
+    margin-bottom: 2%;
+    text-align: justify;
+}
+.createBlog label{
+    display:block;
+    font-size: 18px;
+    margin-top: 2%;
+}
+.createBlog input{
+    padding: 1% 1%;
+    width: 40%;
+    border: none;
+    border-bottom: #333 dotted 2px;
+}
+.createBlog textarea{
+    width: 40%;
+    padding: 1%;
+}
+.single{
+    color: black;
+    margin-left: 5px;
+}
+.single{
+    display: block;
+    margin: 45px 0;
+    padding-left: 15px;
+    border-left: 5px solid var(--textColor);
+}
+.single:hover{
+    color: var(--textColor);
+    transition: .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.footer{
+    position: absolute;
+    bottom:5px;
+    color: var(--textColor) ;
+}
+button{
+    background-color:var(--textColor);
+    padding:1% 1%;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid var(--textColor);
+}
+button:hover{
+
+    background-color: #fff;
+    color: var(--textColor);
+    border: 2px solid var(--textColor);
+    transition: .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.detail{
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
